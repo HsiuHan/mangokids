@@ -10,6 +10,18 @@
 	$('#img1').addClass('animated bounce');
 </script>
 
+<script>
+	function setup() {
+  var e = document.getElementById("header1");
+  e.addEventListener("animationstart", listener, false);
+  e.addEventListener("animationend", listener, false);
+  e.addEventListener("animationiteration", listener, false);
+
+  var e = document.getElementById("header1");
+  e.className = "slidein";
+}
+</script>
+
 
 <style>
 
@@ -25,6 +37,20 @@ p.header1 {
     padding-bottom: 0px;
     padding-left: 800px;
 	font-size:33px;
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+  @keyframes slidein {
+  from {
+    padding-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    padding-left: 800px;
+    width: 100%;
+  }
+}
 	
 }
 
